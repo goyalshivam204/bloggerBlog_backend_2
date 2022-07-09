@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 const Blog=require("./models/Blog");
 const User=require("./models/User");
 const jwt=require('jsonwebtoken');
-// const cors = require('cors');
+const cors = require('cors');
 const path=require('path');
 const isAuthenticated = require("./isAuthenticated");
 
@@ -34,6 +34,7 @@ app.use(function (req, res, next) {
     // res.header("Access-Control-Allow-Headers","x-access-token");
 
     res.setHeader("Access-Control-Allow-Origin", 'http://localhost:3000');
+    res.setHeader("Access-Control-Allow-Origin", 'https://effulgent-churros-88edc4.netlify.app');
     res.setHeader('Access-Control-Allow-Methods', 'POST,GET,OPTIONS,PUT,DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Accept,x-access-token');
 
