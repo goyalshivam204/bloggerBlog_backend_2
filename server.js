@@ -33,7 +33,7 @@ app.use(function (req, res, next) {
     // res.header("Access-Control-Allow-Headers", "Origin, ,X-Requested-With, Content-Type, Accept");
     // res.header("Access-Control-Allow-Headers","x-access-token");
 
-    corsAllowedList = [ 'http://localhost:3000' , 'https://effulgent-churros-88edc4.netlify.app' ]
+    corsAllowedList = [ 'http://localhost:3000' , 'https://effulgent-churros-88edc4.netlify.app','https://bloggerblog-in.netlify.app' ]
     console.log(req.headers.origin);
     if (corsAllowedList.indexOf(req.headers.origin) !== -1){
         res.setHeader("Access-Control-Allow-Origin", req.headers.origin);
